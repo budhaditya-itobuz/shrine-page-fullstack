@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.navbar {
+    padding: 20px 10px !important;
+
+    .hover-nav {
+        border-bottom: 2px solid #F6F2EB;
+
+        &:hover {
+            border-image: linear-gradient(to right, #C0304F, #C0304F 70%, #F6F2EB 70%, #F6F2EB 80%, #C0304F 80%, #C0304F);
+            border-image-slice: 1;
+        }
+    }
+
+    background-color: #F6F2EB !important;
+
+    .nav-logo {
+        background-color: #F6F2EB !important;
+    }
+}
+
+.hero {
+    background-color: #F6F2EB;
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .row {
+        &>div:nth-child(1) {
+            order: 0;
+
+            &>div {
+                width: 280px;
+                margin: 10px 0;
+                border: 1px solid #DDDDDD;
+                border-radius: 50% 50% 0 0;
+            }
+
+            .button-nav {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+
+        &>div:nth-child(2) {
+            order: 4;
+        }
+
+        &>div:nth-child(3) {
+            order: 3;
+
+            &>div.statue {
+                border: 1px solid #DDDDDD;
+                border-radius: 50% 50% 0 0;
+            }
+        }
+    }
+
+    .donate {
+        .large-text {
+            font-size: 50px;
+            font-style: italic;
+        }
+
+        .separator {
+            width: 1px;
+            height: 80px;
+            background-color: #DDDDDD;
+        }
+
+        p {
+            max-width: 500px;
+        }
+
+        .donate-logo {
+            width: 150px;
+            top: -40%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.we-call {
+    .title {
+        max-width: 220px;
+        padding-left: 10px;
+        border-left: 3px solid #C0304F;
+    }
+
+    h3{
+        font-family: "roboto-sarif";
+        font-size: 22px;
+        max-width: 250px;
+    }
+    h6{
+        max-width: 250px;
+    }
+
+    max-width: 1000px;
+    margin:auto;
+
+    .row {
+        img {
+            margin:auto;
+            width: 80%;
+            max-width: 300px;
+        }
+    }
+    .we-call-info{
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width:990px) {
+    .hero {
+        .row {
+            &>div:nth-child(2) {
+                order: 2;
+            }
+        }
+    }
+
+}
+
+
+.feel-god {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: auto;
+
+    .feel-god-header {
+        h2 {
+
+            border-left: 2px solid #C0304F;
+            padding-left: 20px;
+            max-width: 350px;
+            line-height: 40px;
+        }
+
+        h6 {
+            max-width: 400px;
+        }
+    }
+
+    .members {
+        margin: auto;
+
+        .card {
+            height: 420px;
+            justify-content: start !important;
+
+            .social {
+                visibility: hidden;
+            }
+
+            .share {
+                height: 42px;
+                width: 42px !important;
+                border: 1px solid #dddddd;
+                border-radius: 50%;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            border:none;
+
+            h4 {
+                font-family: "roboto-sarif";
+                font-size: 22px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+
+            padding:20px 10px;
+            max-width: 300px;
+            margin:auto;
+
+            &>img {
+                margin: auto;
+                max-width: 220px;
+            }
+
+            .details {
+                &:hover {
+                    .social {
+                        visibility: unset;
+                        display: flex;
+
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .share {
+                        display: none;
+                        background-color: #C0304F;
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
