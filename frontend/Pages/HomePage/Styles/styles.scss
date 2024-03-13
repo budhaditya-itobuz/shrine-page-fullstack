@@ -126,6 +126,80 @@
     }
 }
 
+.faithful-heart {
+    &>div {
+        flex: 1;
+    }
+
+    .picture {
+        img {
+            max-width: 450px;
+        }
+    }
+
+    .text {
+        .title {
+            border-left: 5px solid rgb(176, 22, 22);
+            max-width: 400px;
+        }
+    }
+
+    .famous-quote {
+        border: 2px dashed black;
+        width: 180px;
+    }
+
+    .martin::before {
+        content: url("../assets/home/faithfulHeart/quote.svg");
+        margin-right: 10px !important;
+        position: relative;
+        top: 0;
+    }
+
+}
+.grow-stronger {
+    &>div {
+        flex: 1
+    }
+
+    .text {
+        .title {
+            max-width: 400px;
+        }
+
+        .points {
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 1px solid black;
+            }
+        }
+    }
+
+    .image {
+        .hand {
+            left: -10%;
+            bottom: -10%;
+        }
+
+        .girl {
+            height: 500px;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .grow-stronger {
+        .image {
+            .girl {
+                position: absolute !important;
+            }
+        }
+    }
+
+}
 @media screen and (min-width:990px) {
     .hero {
         .row {
