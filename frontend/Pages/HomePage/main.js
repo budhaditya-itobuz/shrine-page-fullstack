@@ -1,10 +1,24 @@
-import { memberUrl, getElement } from "../../Helper/helper.js"
+import { apis, getElement } from "../../Helper/helper.js"
 
 const memberContainer = document.getElementById('memberContainer')
+const teamImagesContainer = document.getElementById('teamImages')
+const suscribeForm = document.getElementById('suscribeForm')
+const missionContainer = document.getElementById('missionContainer')
 
-const getData = async () => {
-    const data = await (await fetch(memberUrl)).json()
-    return data;
+
+const { memberUrl, teamUrl, suscribeUrl, MisionUrl } = apis
+
+const getData = async (url) => {
+    return await (await fetch(url)).json()
+}
+
+const sendData = async (url, data) => {
+    const response = await fetch(url, {
+        method: "POST", headers: {
+            "Content-Type": "application/json",
+        }, body: JSON.stringify(data)
+    })
+    return await response.json()
 }
 
 const social = () => {
@@ -38,9 +52,70 @@ const renderTestimony = (members) => {
     })
 }
 
+const renderMission = (missions) => {
+    console.log(missions)
+    missions.forEach(item => {
+        const card = getElement('div', { class: "col-sm-12 col-md-6 col-lg-3" }, missionContainer)
+
+        const cardBody = getElement('div', { class: "card-body my-3 mx-auto px-4 d-flex flex-column align-items-center ministries-card" }, card)
+
+        const cardImg = getElement('div', { class: "card-img mb-3" }, cardBody)
+
+        const img = getElement('img', { src: item.img }, cardImg)
+
+        const h4 = getElement('h4', { class: "mb-3 fs-4 text-center" }, cardBody)
+        h4.innerText = item.heading
+
+        const h5 = getElement('h5', { class: "subtitle text-center mb-3" }, cardBody)
+        h5.innerText = item.text
+
+        const readMore = getElement('div', { class: "d-flex align-items-center" }, cardBody)
+
+        const a = getElement('a', { href: item.link, class: "mx-2" }, readMore)
+        console.log(a)
+        a.innerText = "Read More"
+
+        const arrow = getElement('div', { class: " dot d-flex justify-content-center align-items-center" }, readMore)
+        arrow.innerText = ">"
+    })
+
+}
+
+const renderTeam = (teams) => {
+
+    teams.forEach(item => {
+        getElement('img', { src: item }, teamImagesContainer)
+    })
+
+}
+
 async function render() {
-    const data = await getData()
-    renderTestimony(data)
+    const members = await getData(memberUrl)
+    renderTestimony(members)
+
+    const teams = await getData(teamUrl)
+    renderTeam(teams)
+
+    const missions = await getData(MisionUrl)
+    renderMission(missions)
+
+    suscribeForm.addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        const formData = new FormData(e.target)
+        const data = Object.fromEntries(formData.entries())
+        const { email, checkbox = false } = data
+        if (!checkbox)
+            alert('please check the Terms and Conditions checkbox')
+        else {
+            emailjs.send("budhaditya007", "template_2hg62sa", {
+                email: email,
+            });
+            const response = await sendData(suscribeUrl, { email: email })
+            alert(response.message)
+        }
+    })
+
 }
 
 render()

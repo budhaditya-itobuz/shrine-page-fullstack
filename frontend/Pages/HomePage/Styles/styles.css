@@ -101,22 +101,49 @@
   max-width: 400px;
 }
 
+.join-us .join-us-body {
+  max-width: 900px;
+  background-color: #FFE6E0;
+  border-radius: 4px;
+  margin: auto;
+}
+.join-us .join-us-body .separator {
+  min-width: 1px !important;
+  margin: 10px;
+  background-color: #BAA7A3;
+}
+.join-us .join-us-body h4 {
+  font-family: "roboto-sarif";
+}
+.join-us .join-us-body .team-images img {
+  width: 50px;
+  margin-left: -15px;
+}
+
 .faithful-heart > div {
   flex: 1;
 }
 .faithful-heart .picture img {
   max-width: 450px;
 }
+.faithful-heart .text {
+  max-width: 500px;
+}
 .faithful-heart .text .title {
-  border-left: 5px solid rgb(176, 22, 22);
+  border-left: 2px solid rgb(176, 22, 22);
+  padding-left: 10px;
   max-width: 400px;
 }
 .faithful-heart .famous-quote {
   border: 2px dashed black;
   width: 180px;
 }
+.faithful-heart .martin {
+  font-size: 20px;
+  font-weight: 500;
+}
 .faithful-heart .martin::before {
-  content: url("../assets/home/faithfulHeart/quote.svg");
+  content: url("../../../Images/Home/FaithfulHeart/quote.svg");
   margin-right: 10px !important;
   position: relative;
   top: 0;
@@ -143,16 +170,110 @@
   height: 500px;
 }
 
-@media (min-width: 1024px) {
-  .grow-stronger .image .girl {
-    position: absolute !important;
-  }
+.mission .mission-head {
+  max-width: 1000px;
 }
-@media screen and (min-width: 990px) {
-  .hero .row > div:nth-child(2) {
-    order: 2;
-  }
+.mission .mission-head h2 {
+  max-width: 300px;
+  border-left: 2px solid #C0304F;
+  padding-left: 10px;
 }
+.mission .mission-head h5 {
+  max-width: 400px;
+}
+.mission .ministries-card {
+  max-width: 350px;
+  border-radius: 25px 25px 25px 0px;
+  transition: ease-in-out 400ms;
+}
+.mission .ministries-card:hover {
+  transform: scale(1.05);
+  background-color: #FFE6E0;
+}
+.mission .ministries-card .card-img {
+  width: 80px;
+}
+.mission .ministries-card a {
+  color: #232526;
+}
+.mission .ministries-card .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #232526;
+  color: white;
+  border-radius: 20px;
+}
+
+.latest-article {
+  max-width: 1000px;
+  margin: auto;
+}
+.latest-article .article-header {
+  margin: auto;
+  width: 1000px !important;
+}
+.latest-article .article-header .title {
+  max-width: 250px;
+  border-left: 2px solid #C0304F;
+  padding-left: 10px;
+}
+.latest-article .article-header .subtitle {
+  max-width: 400px;
+}
+.latest-article .article-img {
+  background-image: url("../../../Images/Home/Article/church.svg");
+  background-position: center;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+.latest-article .article-img .feature-card {
+  border-radius: 6px;
+  background-color: white;
+  max-width: 300px;
+}
+.latest-article .article-img .feature-card h4 {
+  font-size: 18px;
+}
+.latest-article .article-img .feature-card h3 {
+  font-size: 22px;
+  font-family: "roboto-sarif";
+  font-weight: 600;
+}
+.latest-article .suscribe-form {
+  max-width: 500px;
+  border-radius: 10px;
+}
+.latest-article .suscribe-form .form-head {
+  font-family: "roboto-sarif";
+  font-weight: 600;
+}
+.latest-article .suscribe-form > input {
+  padding: 10px;
+  border: 1px solid #DDDDDD;
+  border-radius: 6px;
+}
+.latest-article .suscribe-form > input::-moz-placeholder {
+  font-size: 10px;
+  margin: auto;
+  color: #B3B3B3;
+}
+.latest-article .suscribe-form > input::placeholder {
+  font-size: 10px;
+  margin: auto;
+  color: #B3B3B3;
+}
+.latest-article .articles .article-card {
+  max-width: 300px;
+  border-radius: 8px;
+}
+.latest-article .articles .article-card h3 {
+  font-family: "roboto-sarif";
+  font-weight: 600;
+  font-size: 22px;
+}
+
 .feel-god {
   padding: 50px 0;
   max-width: 1000px;
@@ -213,4 +334,20 @@
 }
 .feel-god .members .card .details:hover .share img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
+}
+
+@media (min-width: 1024px) {
+  .grow-stronger .image .girl {
+    position: absolute !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .latest-article .article-header {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 776px) {
+  .hero .row > div:nth-child(2) {
+    order: 2;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -102,12 +102,13 @@
         border-left: 3px solid #C0304F;
     }
 
-    h3{
+    h3 {
         font-family: "roboto-sarif";
         font-size: 22px;
         max-width: 250px;
     }
-    h6{
+
+    h6 {
         max-width: 250px;
     }
 
@@ -116,13 +117,41 @@
 
     .row {
         img {
-            margin:auto;
+            margin: auto;
             width: 80%;
             max-width: 300px;
         }
     }
-    .we-call-info{
+
+    .we-call-info {
         max-width: 400px;
+    }
+}
+
+.join-us {
+    .join-us-body {
+        max-width: 900px;
+        background-color: #FFE6E0;
+        border-radius: 4px;
+
+        .separator {
+            min-width: 1px !important;
+            margin: 10px;
+            background-color: #BAA7A3;
+        }
+
+        margin: auto;
+
+        h4 {
+            font-family: "roboto-sarif";
+        }
+
+        .team-images {
+            img {
+                width: 50px;
+                margin-left: -15px;
+            }
+        }
     }
 }
 
@@ -139,9 +168,12 @@
 
     .text {
         .title {
-            border-left: 5px solid rgb(176, 22, 22);
+            border-left: 2px solid rgb(176, 22, 22);
+            padding-left: 10px;
             max-width: 400px;
         }
+
+        max-width: 500px;
     }
 
     .famous-quote {
@@ -149,14 +181,20 @@
         width: 180px;
     }
 
+    .martin {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
     .martin::before {
-        content: url("../assets/home/faithfulHeart/quote.svg");
+        content: url("../../../Images/Home/FaithfulHeart/quote.svg");
         margin-right: 10px !important;
         position: relative;
         top: 0;
     }
 
 }
+
 .grow-stronger {
     &>div {
         flex: 1
@@ -190,109 +228,236 @@
     }
 }
 
-@media (min-width:1024px) {
-    .grow-stronger {
-        .image {
-            .girl {
-                position: absolute !important;
-            }
-        }
-    }
-
-}
-@media screen and (min-width:990px) {
-    .hero {
-        .row {
-            &>div:nth-child(2) {
-                order: 2;
-            }
-        }
-    }
-
-}
-
-
-.feel-god {
-    padding: 50px 0;
-    max-width: 1000px;
-    margin: auto;
-
-    .feel-god-header {
+.mission {
+    .mission-head{
+        max-width: 1000px;
         h2 {
-
+            max-width: 300px;
             border-left: 2px solid #C0304F;
-            padding-left: 20px;
-            max-width: 350px;
-            line-height: 40px;
+            padding-left: 10px;
         }
-
-        h6 {
+        h5{
             max-width: 400px;
         }
     }
 
-    .members {
+    .ministries-card {
+        max-width: 350px;
+        border-radius: 25px 25px 25px 0px;
+        transition: ease-in-out 400ms;
+        
+        &:hover {
+            transform: scale(1.05);
+            background-color: #FFE6E0;
+        }
+
+        .card-img {
+            width: 80px;
+        }
+
+        a {
+            color: #232526;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #232526;
+            color: white;
+            border-radius: 20px;
+        }
+
+    }
+}
+
+.latest-article {
+    max-width: 1000px;
+    margin: auto;
+
+    .article-header {
         margin: auto;
+        width: 1000px !important;
+        .title {
+            max-width: 250px;
+            border-left: 2px solid #C0304F;
+            padding-left: 10px;
+        }
 
-        .card {
-            height: 420px;
-            justify-content: start !important;
+        .subtitle {
+            max-width: 400px;
+        }
 
-            .social {
-                visibility: hidden;
+    }
+
+    .article-img {
+        background-image: url('../../../Images/Home/Article/church.svg');
+        background-position: center;
+        border-radius: 10px;
+        max-width: 600px;
+        margin:auto;
+        .feature-card{
+            h4{
+                font-size: 18px;
             }
-
-            .share {
-                height: 42px;
-                width: 42px !important;
-                border: 1px solid #dddddd;
-                border-radius: 50%;
-
-                img {
-                    width: 20px;
-                }
-            }
-
-            border:none;
-
-            h4 {
-                font-family: "roboto-sarif";
+            h3{
                 font-size: 22px;
+                font-family: "roboto-sarif";
                 font-weight: 600;
-                margin: 10px 0;
             }
-
-            padding:20px 10px;
+            border-radius: 6px;
+            background-color: white;
             max-width: 300px;
-            margin:auto;
+        }
 
-            &>img {
+    }
+
+    .suscribe-form {
+        max-width: 500px;
+        border-radius: 10px;
+        .form-head{
+            font-family: "roboto-sarif";
+            font-weight: 600 ;
+        }
+        &>input {
+            &::placeholder{
+                font-size: 10px;
                 margin: auto;
-                max-width: 220px;
+                color:#B3B3B3;
             }
-
-            .details {
-                &:hover {
-                    .social {
-                        visibility: unset;
-                        display: flex;
-
-                        img {
-                            margin-right: 10px;
-                        }
-                    }
-
-                    .share {
-                        display: none;
-                        background-color: #C0304F;
-
-                        img {
-                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
-                        }
-                    }
-                }
+            padding:10px;
+            border: 1px solid #DDDDDD;
+            border-radius: 6px;
+        }
+    }
+    .articles{
+        .article-card{
+            max-width: 300px;
+            border-radius: 8px;
+            h3{
+                font-family: "roboto-sarif";
+                font-weight: 600;
+                font-size: 22px;
             }
-
         }
     }
 }
+
+
+
+
+    .feel-god {
+        padding: 50px 0;
+        max-width: 1000px;
+        margin: auto;
+
+        .feel-god-header {
+            h2 {
+
+                border-left: 2px solid #C0304F;
+                padding-left: 20px;
+                max-width: 350px;
+                line-height: 40px;
+            }
+
+            h6 {
+                max-width: 400px;
+            }
+        }
+
+        .members {
+            margin: auto;
+
+            .card {
+                height: 420px;
+                justify-content: start !important;
+
+                .social {
+                    visibility: hidden;
+                }
+
+                .share {
+                    height: 42px;
+                    width: 42px !important;
+                    border: 1px solid #dddddd;
+                    border-radius: 50%;
+
+                    img {
+                        width: 20px;
+                    }
+                }
+
+                border:none;
+
+                h4 {
+                    font-family: "roboto-sarif";
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin: 10px 0;
+                }
+
+                padding:20px 10px;
+                max-width: 300px;
+                margin:auto;
+
+                &>img {
+                    margin: auto;
+                    max-width: 220px;
+                }
+
+                .details {
+                    &:hover {
+                        .social {
+                            visibility: unset;
+                            display: flex;
+
+                            img {
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .share {
+                            display: none;
+                            background-color: #C0304F;
+
+                            img {
+                                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media (min-width:1024px) {
+        .grow-stronger {
+            .image {
+                .girl {
+                    position: absolute !important;
+                }
+            }
+        }
+
+    }
+
+    @media screen and (min-width:768px) {
+        .latest-article {
+            .article-header {
+                max-width: 800px;
+            }
+        }
+
+    }
+
+    @media screen and (min-width:776px) {
+        .hero {
+            .row {
+                &>div:nth-child(2) {
+                    order: 2;
+                }
+            }
+        }
+
+    }
