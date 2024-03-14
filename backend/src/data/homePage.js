@@ -54,3 +54,27 @@ export const missions = [
         link: " "
     }
 ]
+
+export const articles=[
+    {
+        img:"../../Images/Home/Article/church-brown.png",
+        heading:"Baptism Sunday of church",
+        text:"Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
+        userImg:"../../Images/Home/Article/girl-blue.png",
+        time:2
+    },
+    {
+        img:"../../Images/Home/Article/church-red.png",
+        heading:"Baptism Sunday of church",
+        text:"Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
+        userImg:"../../Images/Home/Article/girl-pink.png",
+        time:4
+    },
+    {
+        img:"../../Images/Home/Article/church-black.png",
+        heading:"Baptism Sunday of church",
+        text:"Sir Gerry Serrano A long established fact that a reader will be distracted by the readable content of...",
+        userImg:"../../Images/Home/Article/girl-white.png",
+        time:6
+    }
+]

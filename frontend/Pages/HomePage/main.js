@@ -4,9 +4,10 @@ const memberContainer = document.getElementById('memberContainer')
 const teamImagesContainer = document.getElementById('teamImages')
 const suscribeForm = document.getElementById('suscribeForm')
 const missionContainer = document.getElementById('missionContainer')
+const articleContainer = document.getElementById('articleContainer')
 
 
-const { memberUrl, teamUrl, suscribeUrl, MisionUrl } = apis
+const { memberUrl, teamUrl, suscribeUrl, misionUrl, articleUrl } = apis
 
 const getData = async (url) => {
     return await (await fetch(url)).json()
@@ -89,6 +90,27 @@ const renderTeam = (teams) => {
 
 }
 
+const renderArticle = (articles) => {
+    articles.forEach(item => {
+        const articleCard = getElement('div', { class: 'col-sm-12 col-md-4' },articleContainer);
+        const articleCardBody=getElement('div',{class:"card article-card m-3"},articleCard)
+
+        const img = getElement('img', { src: item.img}, articleCardBody);
+        const cardBody = getElement('div', { class: 'card-body' }, articleCardBody);
+        const h3 = getElement('h3', null, cardBody);
+        h3.innerText = item.heading;
+
+        const h5 = getElement('h5', { class: 'subtitle' }, cardBody);
+        h5.innerText = item.text
+
+        const user = getElement('div', { class: 'd-flex align-content-center' }, cardBody);
+        const imgGirl = getElement('img', { src:item.userImg }, user);
+        const smallText = getElement('h6', { class: 'small-text my-auto' }, user);
+        smallText.innerText = `-- ${item.time} min read`;
+    })
+
+}
+
 async function render() {
     const members = await getData(memberUrl)
     renderTestimony(members)
@@ -96,8 +118,11 @@ async function render() {
     const teams = await getData(teamUrl)
     renderTeam(teams)
 
-    const missions = await getData(MisionUrl)
+    const missions = await getData(misionUrl)
     renderMission(missions)
+
+    const articles = await getData(articleUrl)
+    renderArticle(articles)
 
     suscribeForm.addEventListener('submit', async (e) => {
         e.preventDefault()

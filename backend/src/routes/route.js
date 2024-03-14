@@ -6,6 +6,7 @@ const router=express.Router()
 router.get('/members',getMembers)
 router.get('/teams',getTeam)
 router.get("/missions",getMission)
+router.get("/articles",getMission)
 
 router.post('/addSuscriber',addSuscriber)
 

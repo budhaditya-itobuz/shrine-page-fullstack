@@ -3,7 +3,8 @@ export const apis = {
     memberUrl: "http://localhost:3000/members",
     teamUrl: "http://localhost:3000/teams",
     suscribeUrl: "http://localhost:3000/addSuscriber",
-    MisionUrl: "http://localhost:3000/missions"
+    misionUrl: "http://localhost:3000/missions",
+    articleUrl: "http://localhost:3000/articles"
 }
 
 
