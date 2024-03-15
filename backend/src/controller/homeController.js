@@ -1,4 +1,4 @@
-import { members, team, missions ,articles} from "../data/homePage.js"
+import { members, team, missions ,articles,events} from "../data/homePage.js"
 import fs from 'fs'
 import path from 'path'
 import { StatusCodes } from "http-status-codes"
@@ -8,7 +8,7 @@ import { StatusCodes } from "http-status-codes"
 
 export const getMembers = async (req, res) => {
     if (!!members)
-        res.status(StatusCodes.OK).json(team)
+        res.status(StatusCodes.OK).json(members)
     else
         res.status(StatusCodes.NOT_FOUND).json({ message: "File not found!" })
 }
@@ -28,9 +28,17 @@ export const getMission = async (req, res) => {
 
 }
 
-export const getArticle= ()=>{
+export const getArticle= (req,res)=>{
     if (!!articles)
         res.status(StatusCodes.OK).json(articles)
+    else
+        res.status(StatusCodes.NOT_FOUND).json({ message: "File not found!" })
+
+}
+
+export const getEvent= (req,res)=>{
+    if (!!events)
+        res.status(StatusCodes.OK).json(events)
     else
         res.status(StatusCodes.NOT_FOUND).json({ message: "File not found!" })
 

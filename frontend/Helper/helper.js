@@ -1,10 +1,11 @@
 
 export const apis = {
-    memberUrl: "http://localhost:3000/members",
-    teamUrl: "http://localhost:3000/teams",
-    suscribeUrl: "http://localhost:3000/addSuscriber",
-    misionUrl: "http://localhost:3000/missions",
-    articleUrl: "http://localhost:3000/articles"
+    memberUrl: "http://localhost:3000/home/members",
+    teamUrl: "http://localhost:3000/home/teams",
+    suscribeUrl: "http://localhost:3000/home/addSuscriber",
+    misionUrl: "http://localhost:3000/home/missions",
+    articleUrl: "http://localhost:3000/home/articles",
+    eventUrl:"http://localhost:3000/home/events"
 }
 
 

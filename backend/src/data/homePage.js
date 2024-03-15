@@ -78,3 +78,50 @@ export const articles=[
         time:6
     }
 ]
+
+export const events=[
+    {
+        img:"../../Images/Home/Events/mindfullness.png",
+        startDate:"24.12.2023",
+        endDate:"28.12.2023",
+        place:"Russian Federation St. Peter’s Church",
+        startTime:"4:38",
+        endTime:"8:24",
+        heading:"Mindfulness Meditation",
+        text:"A long established fact that a reader will be distracted by the readable content of..."
+
+    },
+    {
+        img:"../../Images/Home/Events/holy-bible.png",
+        startDate:"24.12.2023",
+        endDate:"28.12.2023",
+        place:"Russian Federation St. Peter’s Church",
+        startTime:"4:38",
+        endTime:"8:24",
+        heading:"The Positive Aura Seminar",
+        text:"A long established fact that a reader will be distracted by the readable content of..."
+
+    },
+    {
+        img:"../../Images/Home/Events/mindfullness.png",
+        startDate:"24.12.2023",
+        endDate:"28.12.2023",
+        place:"Russian Federation St. Peter’s Church",
+        startTime:"4:38",
+        endTime:"8:24",
+        heading:"Mindfulness Meditation",
+        text:"A long established fact that a reader will be distracted by the readable content of..."
+
+    },
+    {
+        img:"../../Images/Home/Events/holy-bible.png",
+        startDate:"24.12.2023",
+        endDate:"28.12.2023",
+        place:"Russian Federation St. Peter’s Church",
+        startTime:"4:38",
+        endTime:"8:24",
+        heading:"The Positive Aura Seminar",
+        text:"A long established fact that a reader will be distracted by the readable content of..."
+
+    }
+]

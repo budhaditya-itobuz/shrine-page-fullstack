@@ -186,6 +186,11 @@
   border-radius: 25px 25px 25px 0px;
   transition: ease-in-out 400ms;
 }
+.mission .ministries-card h4 {
+  font-family: "roboto-sarif";
+  font-size: 22px;
+  font-weight: 600;
+}
 .mission .ministries-card:hover {
   transform: scale(1.05);
   background-color: #FFE6E0;
@@ -205,20 +210,66 @@
   border-radius: 20px;
 }
 
+.events .event-body {
+  overflow-x: hidden;
+  max-width: 1000px;
+  margin: auto;
+}
+.events .event-header {
+  max-width: 1000px;
+}
+.events .event-header .title {
+  max-width: 200px;
+  border-left: 2px solid #C0304F;
+  padding-left: 10px;
+}
+.events .event-header .subtitle {
+  max-width: 400px;
+}
+.events .event-card {
+  margin: 20px;
+  min-width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.events .event-card .card-body {
+  max-width: 350px;
+}
+.events .event-card .card-body h3 {
+  font-family: "roboto-sarif";
+  font-size: 24px;
+  font-weight: 600;
+}
+.events .move-btns .move-left,
+.events .move-btns .move-right {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+  border: 1px solid #DDDDDD;
+}
+.events .move-btns .move-left:hover,
+.events .move-btns .move-right:hover {
+  background-color: #C0304F;
+  color: white;
+}
+
 .latest-article {
   max-width: 1000px;
   margin: auto;
 }
-.latest-article .article-header {
+.latest-article .article-head {
   margin: auto;
-  width: 1000px !important;
 }
-.latest-article .article-header .title {
+.latest-article .article-head .title {
   max-width: 250px;
   border-left: 2px solid #C0304F;
   padding-left: 10px;
 }
-.latest-article .article-header .subtitle {
+.latest-article .article-head .subtitle {
   max-width: 400px;
 }
 .latest-article .article-img {
@@ -342,11 +393,17 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .events .event-card {
+    min-width: 600px;
+    max-height: 320px;
+    border-radius: 5px;
+  }
+  .events .event-card img {
+    max-width: 200px;
+  }
   .latest-article .article-header {
     max-width: 800px;
   }
-}
-@media screen and (min-width: 776px) {
   .hero .row > div:nth-child(2) {
     order: 2;
   }

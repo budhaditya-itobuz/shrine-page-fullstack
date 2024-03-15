@@ -1,14 +1,28 @@
 import express from "express"
-import { getMembers,getTeam,addSuscriber,getMission } from "../controller/homeController.js"
+import { getMembers, getTeam, addSuscriber, getMission, getArticle, getEvent } from "../controller/homeController.js"
 
-const router=express.Router()
+const homeBaseUrl = "/home"
 
-router.get('/members',getMembers)
-router.get('/teams',getTeam)
-router.get("/missions",getMission)
-router.get("/articles",getMission)
+const home = {
+    members: homeBaseUrl + "/members",
+    teams: homeBaseUrl + "/teams",
+    missions: homeBaseUrl + "/missions",
+    articles: homeBaseUrl + "/articles",
+    events: homeBaseUrl + "/events"
+}
 
-router.post('/addSuscriber',addSuscriber)
+
+
+
+const router = express.Router()
+
+router.get(home.members, getMembers)
+router.get(home.teams, getTeam)
+router.get(home.missions, getMission)
+router.get(home.articles, getArticle)
+router.get(home.events, getEvent)
+
+router.post('/addSuscriber', addSuscriber)
 
 
 export default router 

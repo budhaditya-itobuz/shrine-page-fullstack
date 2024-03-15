@@ -229,14 +229,16 @@
 }
 
 .mission {
-    .mission-head{
+    .mission-head {
         max-width: 1000px;
+
         h2 {
             max-width: 300px;
             border-left: 2px solid #C0304F;
             padding-left: 10px;
         }
-        h5{
+
+        h5 {
             max-width: 400px;
         }
     }
@@ -245,7 +247,12 @@
         max-width: 350px;
         border-radius: 25px 25px 25px 0px;
         transition: ease-in-out 400ms;
-        
+        h4{
+            font-family: "roboto-sarif";
+            font-size: 22px;
+            font-weight: 600 ;
+
+        }
         &:hover {
             transform: scale(1.05);
             background-color: #FFE6E0;
@@ -271,13 +278,72 @@
     }
 }
 
+.events {
+    .event-body {
+        overflow-x: hidden;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .event-header {
+        max-width: 1000px;
+
+        .title {
+            max-width: 200px;
+            border-left: 2px solid #C0304F;
+            padding-left: 10px;
+        }
+
+        .subtitle {
+            max-width: 400px;
+        }
+    }
+
+    .event-card {
+        margin: 20px;
+        min-width: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+
+        .card-body {
+            max-width: 350px;
+
+            h3 {
+                font-family: "roboto-sarif";
+                font-size: 24px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .move-btns {
+
+        .move-left,
+        .move-right {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 25px;
+            border: 1px solid #DDDDDD;
+
+            &:hover {
+                background-color: #C0304F;
+                color: white;
+            }
+        }
+    }
+}
+
 .latest-article {
     max-width: 1000px;
     margin: auto;
 
-    .article-header {
+    .article-head{
         margin: auto;
-        width: 1000px !important;
+
         .title {
             max-width: 250px;
             border-left: 2px solid #C0304F;
@@ -295,16 +361,19 @@
         background-position: center;
         border-radius: 10px;
         max-width: 600px;
-        margin:auto;
-        .feature-card{
-            h4{
+        margin: auto;
+
+        .feature-card {
+            h4 {
                 font-size: 18px;
             }
-            h3{
+
+            h3 {
                 font-size: 22px;
                 font-family: "roboto-sarif";
                 font-weight: 600;
             }
+
             border-radius: 6px;
             background-color: white;
             max-width: 300px;
@@ -315,26 +384,31 @@
     .suscribe-form {
         max-width: 500px;
         border-radius: 10px;
-        .form-head{
+
+        .form-head {
             font-family: "roboto-sarif";
-            font-weight: 600 ;
+            font-weight: 600;
         }
+
         &>input {
-            &::placeholder{
+            &::placeholder {
                 font-size: 10px;
                 margin: auto;
-                color:#B3B3B3;
+                color: #B3B3B3;
             }
+
             padding:10px;
             border: 1px solid #DDDDDD;
             border-radius: 6px;
         }
     }
-    .articles{
-        .article-card{
+
+    .articles {
+        .article-card {
             max-width: 300px;
             border-radius: 8px;
-            h3{
+
+            h3 {
                 font-family: "roboto-sarif";
                 font-weight: 600;
                 font-size: 22px;
@@ -346,118 +420,129 @@
 
 
 
-    .feel-god {
-        padding: 50px 0;
-        max-width: 1000px;
+.feel-god {
+    padding: 50px 0;
+    max-width: 1000px;
+    margin: auto;
+
+    .feel-god-header {
+        h2 {
+
+            border-left: 2px solid #C0304F;
+            padding-left: 20px;
+            max-width: 350px;
+            line-height: 40px;
+        }
+
+        h6 {
+            max-width: 400px;
+        }
+    }
+
+    .members {
         margin: auto;
 
-        .feel-god-header {
-            h2 {
+        .card {
+            height: 420px;
+            justify-content: start !important;
 
-                border-left: 2px solid #C0304F;
-                padding-left: 20px;
-                max-width: 350px;
-                line-height: 40px;
+            .social {
+                visibility: hidden;
             }
 
-            h6 {
-                max-width: 400px;
+            .share {
+                height: 42px;
+                width: 42px !important;
+                border: 1px solid #dddddd;
+                border-radius: 50%;
+
+                img {
+                    width: 20px;
+                }
             }
-        }
 
-        .members {
-            margin: auto;
+            border:none;
 
-            .card {
-                height: 420px;
-                justify-content: start !important;
+            h4 {
+                font-family: "roboto-sarif";
+                font-size: 22px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
 
-                .social {
-                    visibility: hidden;
-                }
+            padding:20px 10px;
+            max-width: 300px;
+            margin:auto;
 
-                .share {
-                    height: 42px;
-                    width: 42px !important;
-                    border: 1px solid #dddddd;
-                    border-radius: 50%;
+            &>img {
+                margin: auto;
+                max-width: 220px;
+            }
 
-                    img {
-                        width: 20px;
-                    }
-                }
+            .details {
+                &:hover {
+                    .social {
+                        visibility: unset;
+                        display: flex;
 
-                border:none;
-
-                h4 {
-                    font-family: "roboto-sarif";
-                    font-size: 22px;
-                    font-weight: 600;
-                    margin: 10px 0;
-                }
-
-                padding:20px 10px;
-                max-width: 300px;
-                margin:auto;
-
-                &>img {
-                    margin: auto;
-                    max-width: 220px;
-                }
-
-                .details {
-                    &:hover {
-                        .social {
-                            visibility: unset;
-                            display: flex;
-
-                            img {
-                                margin-right: 10px;
-                            }
+                        img {
+                            margin-right: 10px;
                         }
+                    }
 
-                        .share {
-                            display: none;
-                            background-color: #C0304F;
+                    .share {
+                        display: none;
+                        background-color: #C0304F;
 
-                            img {
-                                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
-                            }
+                        img {
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
                         }
                     }
                 }
+            }
 
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .grow-stronger {
+        .image {
+            .girl {
+                position: absolute !important;
             }
         }
     }
 
-    @media (min-width:1024px) {
-        .grow-stronger {
-            .image {
-                .girl {
-                    position: absolute !important;
-                }
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .events {
+        .event-card {
+            min-width: 600px;
+            max-height: 320px;
+            border-radius: 5px;
+            img {
+                max-width: 200px;
             }
         }
-
     }
 
-    @media screen and (min-width:768px) {
-        .latest-article {
-            .article-header {
-                max-width: 800px;
+    .latest-article {
+        .article-header {
+            max-width: 800px;
+        }
+    }
+
+    .hero {
+        .row {
+            &>div:nth-child(2) {
+                order: 2;
             }
         }
-
     }
 
-    @media screen and (min-width:776px) {
-        .hero {
-            .row {
-                &>div:nth-child(2) {
-                    order: 2;
-                }
-            }
-        }
-
-    }
+}

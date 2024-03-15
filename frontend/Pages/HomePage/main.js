@@ -5,9 +5,24 @@ const teamImagesContainer = document.getElementById('teamImages')
 const suscribeForm = document.getElementById('suscribeForm')
 const missionContainer = document.getElementById('missionContainer')
 const articleContainer = document.getElementById('articleContainer')
+const eventContainer = document.getElementById('eventContainer')
+const leftScroll = document.getElementById('leftScroll')
+const rightScroll = document.getElementById('rightScroll')
 
 
-const { memberUrl, teamUrl, suscribeUrl, misionUrl, articleUrl } = apis
+
+const { memberUrl, teamUrl, suscribeUrl, misionUrl, articleUrl, eventUrl } = apis
+
+const prevItem = (container, item, number, length, extraWidth = 0) => {
+    const width = item.clientWidth + 40 + extraWidth;
+    container.scrollBy({ left: -width * number, behavior: "smooth" });
+
+};
+
+const nextItem = (container, item, number, length, extraWidth = 0) => {
+    const width = item.clientWidth + 40 + extraWidth;
+    container.scrollBy({ left: width * number, behavior: "smooth" });
+};
 
 const getData = async (url) => {
     return await (await fetch(url)).json()
@@ -90,12 +105,46 @@ const renderTeam = (teams) => {
 
 }
 
+const renderEvent = (events) => {
+    events.forEach(item => {
+        const card = getElement('div', { class: "card d-flex flex-column flex-md-row event-card" }, eventContainer)
+        const cardImg = getElement('img', { src: item.img }, card)
+        const cardBody = getElement('div', { class: "card-body" }, card)
+
+        const divDate = getElement('div', { class: "d-flex mb-3" }, cardBody)
+        const calender = getElement('img', { src: "../../Images/Home/Events/calender.svg", class: "mx-2" }, divDate)
+        const date = getElement('h4', { class: "subtitle my-auto" }, divDate)
+        date.textContent = `${item.startDate}-${item.endDate}`
+
+        const divPlace = getElement('div', { class: "d-flex mb-3" }, cardBody)
+        const home = getElement('img', { src: "../../Images/Home/Events/home.svg", class: "mx-2" }, divPlace)
+        const place = getElement('h4', { class: "subtitle my-auto" }, divPlace)
+        place.innerText = item.place
+
+        const divTime = getElement('div', { class: "d-flex mb-3" }, cardBody)
+        const clock = getElement('img', { src: "../../Images/Home/Events/clock.svg", class: "mx-2" }, divTime)
+        const time = getElement('h4', { class: "subtitle my-auto" }, divTime)
+        time.innerText = `${item.startTime}-${item.endTime}`
+
+        const heading = getElement('h3', { class: "mb-4" }, cardBody)
+        heading.innerText = item.heading
+
+
+        const text = getElement('h5', { class: "subtitle mb-3" }, cardBody)
+        text.innerText = item.text
+
+        const button = getElement('button', { class: "btn btn-dark px-4 py-2" }, cardBody)
+        button.innerText = "JOIN NOW"
+    })
+
+
+}
 const renderArticle = (articles) => {
     articles.forEach(item => {
-        const articleCard = getElement('div', { class: 'col-sm-12 col-md-4' },articleContainer);
-        const articleCardBody=getElement('div',{class:"card article-card m-3"},articleCard)
+        const articleCard = getElement('div', { class: 'col-sm-12 col-md-4' }, articleContainer);
+        const articleCardBody = getElement('div', { class: "card article-card m-3 mx-auto" }, articleCard)
 
-        const img = getElement('img', { src: item.img}, articleCardBody);
+        const img = getElement('img', { src: item.img }, articleCardBody);
         const cardBody = getElement('div', { class: 'card-body' }, articleCardBody);
         const h3 = getElement('h3', null, cardBody);
         h3.innerText = item.heading;
@@ -104,7 +153,7 @@ const renderArticle = (articles) => {
         h5.innerText = item.text
 
         const user = getElement('div', { class: 'd-flex align-content-center' }, cardBody);
-        const imgGirl = getElement('img', { src:item.userImg }, user);
+        const imgGirl = getElement('img', { src: item.userImg }, user);
         const smallText = getElement('h6', { class: 'small-text my-auto' }, user);
         smallText.innerText = `-- ${item.time} min read`;
     })
@@ -113,6 +162,7 @@ const renderArticle = (articles) => {
 
 async function render() {
     const members = await getData(memberUrl)
+    console.log(members)
     renderTestimony(members)
 
     const teams = await getData(teamUrl)
@@ -123,6 +173,9 @@ async function render() {
 
     const articles = await getData(articleUrl)
     renderArticle(articles)
+
+    const events = await getData(eventUrl)
+    renderEvent(events)
 
     suscribeForm.addEventListener('submit', async (e) => {
         e.preventDefault()
@@ -145,3 +198,12 @@ async function render() {
 
 render()
 
+leftScroll.addEventListener('click', () => {
+    const item=document.querySelectorAll(".event-card")[0]
+    prevItem(eventContainer,item,1)
+})
+
+rightScroll.addEventListener('click', () => {
+    const item=document.querySelectorAll(".event-card")[0]
+    nextItem(eventContainer,item,1)
+})
