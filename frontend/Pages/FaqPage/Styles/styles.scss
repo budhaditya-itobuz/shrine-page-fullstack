@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto-sarif", sans-serif;
+}
+
+
+.hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+
+    .carousel-wrapper {
+        overflow: scroll;
+        max-width: 1000px;
+        transition: 1s ease;
+
+        .carousel {
+            transition: 1s ease;
+
+            &>div {
+                flex-shrink: 0;
+            }
+
+            img {
+                width: 100%;
+                max-height: 400px;
+            }
+        }
+    }
+
+    .buttons {
+        z-index: 3;
+        overflow: hidden;
+        border-radius: 2px;
+        width: fit-content;
+        right: -5px;
+        top: 40%;
+        border-radius: 2px;
+
+        .btn-left,
+        .btn-right {
+            background-color: #C0304F;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            &:hover{
+
+                background-color: black;
+            }
+        }
+    }
+}
+
+.faq {
+    .faq-header {
+        max-width: 1000px;
+        margin: auto;
+
+        .title {
+            padding: 10px;
+            border-left: 3px solid #C0304F;
+        }
+
+        .subtitle {
+            max-width: 800px;
+        }
+    }
+
+    .faq-body {
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .accordion {
+        width: 100%;
+
+        .accordion-item {
+            &:hover {
+                .accordion-index {
+                    background-color: #C0304F;
+                    color: white;
+                    border: none;
+                }
+            }
+
+            border:none;
+            border-bottom: 1px solid #dddddd;
+
+            .accordion-header {
+                padding: 0 10px;
+
+                .accordion-index {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    margin: auto;
+                    border: 1px solid #dddddd;
+                    border-radius: 2px;
+                }
+
+                .accordion-button {
+                    font-family: "roboto-sarif";
+                    font-size: 20px;
+                    font-weight: 600;
+
+                    &:not(.collapsed) {
+                        background-color: white !important;
+                        color: black !important;
+                    }
+
+                    &:focus {
+                        color: black;
+                        background-color: white;
+                        box-shadow: none;
+                        outline: none;
+
+                        // display: none;
+                        .accordion {
+                            .accordion-item {
+                                .accordion-header {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

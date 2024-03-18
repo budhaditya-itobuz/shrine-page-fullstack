@@ -1,4 +1,4 @@
-import { apis, getElement } from "../../Helper/helper.js"
+import { homeApis, getElement,getData } from "../../Helper/helper.js"
 
 const memberContainer = document.getElementById('memberContainer')
 const teamImagesContainer = document.getElementById('teamImages')
@@ -11,7 +11,7 @@ const rightScroll = document.getElementById('rightScroll')
 
 
 
-const { memberUrl, teamUrl, suscribeUrl, misionUrl, articleUrl, eventUrl } = apis
+const { memberUrl, teamUrl, suscribeUrl, misionUrl, articleUrl, eventUrl } = homeApis
 
 const prevItem = (container, item, number, length, extraWidth = 0) => {
     const width = item.clientWidth + 40 + extraWidth;
@@ -24,9 +24,7 @@ const nextItem = (container, item, number, length, extraWidth = 0) => {
     container.scrollBy({ left: width * number, behavior: "smooth" });
 };
 
-const getData = async (url) => {
-    return await (await fetch(url)).json()
-}
+
 
 const sendData = async (url, data) => {
     const response = await fetch(url, {
@@ -57,14 +55,14 @@ const renderTestimony = (members) => {
 
         getElement('img', { class: "image-fluid profile-img", src: "../../Images/Home/Members/share.svg" }, share)
 
-        const name_div = getElement('div', { class: "col-9" }, details)
+        const nameDiv = getElement('div', { class: "col-9" }, details)
 
-        const h4 = getElement('h4', {}, name_div)
+        const h4 = getElement('h4', {}, nameDiv)
         h4.innerText = item.name
 
-        const h5 = getElement('h5', { class: "subtitle" }, name_div)
+        const h5 = getElement('h5', { class: "subtitle" }, nameDiv)
         h5.innerText = item.designation
-        name_div.appendChild(social());
+        nameDiv.appendChild(social());
     })
 }
 

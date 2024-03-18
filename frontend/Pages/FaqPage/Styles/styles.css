@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto-sarif", sans-serif;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+.hero .carousel-wrapper {
+  overflow: scroll;
+  max-width: 1000px;
+  transition: 1s ease;
+}
+.hero .carousel-wrapper .carousel {
+  transition: 1s ease;
+}
+.hero .carousel-wrapper .carousel > div {
+  flex-shrink: 0;
+}
+.hero .carousel-wrapper .carousel img {
+  width: 100%;
+  max-height: 400px;
+}
+.hero .buttons {
+  z-index: 3;
+  overflow: hidden;
+  border-radius: 2px;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: -5px;
+  top: 40%;
+  border-radius: 2px;
+}
+.hero .buttons .btn-left,
+.hero .buttons .btn-right {
+  background-color: #C0304F;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+.hero .buttons .btn-left:hover,
+.hero .buttons .btn-right:hover {
+  background-color: black;
+}
+
+.faq .faq-header {
+  max-width: 1000px;
+  margin: auto;
+}
+.faq .faq-header .title {
+  padding: 10px;
+  border-left: 3px solid #C0304F;
+}
+.faq .faq-header .subtitle {
+  max-width: 800px;
+}
+.faq .faq-body {
+  max-width: 1000px;
+  margin: auto;
+}
+.faq .accordion {
+  width: 100%;
+}
+.faq .accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+.faq .accordion .accordion-item:hover .accordion-index {
+  background-color: #C0304F;
+  color: white;
+  border: none;
+}
+.faq .accordion .accordion-item .accordion-header {
+  padding: 0 10px;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-button {
+  font-family: "roboto-sarif";
+  font-size: 20px;
+  font-weight: 600;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  background-color: white !important;
+  color: black !important;
+}
+.faq .accordion .accordion-item .accordion-header .accordion-button:focus {
+  color: black;
+  background-color: white;
+  box-shadow: none;
+  outline: none;
+}/*# sourceMappingURL=styles.css.map */

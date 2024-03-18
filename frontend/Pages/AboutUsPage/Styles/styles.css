@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.walking {
+  max-width: 1000px;
+  margin: auto;
+}
+.walking .walking-header .title {
+  max-width: 400px;
+  border-left: 2px solid #C0304F;
+  padding-left: 10px;
+}
+.walking .walking-header h5 {
+  max-width: 400px;
+}
+.walking .mission-card {
+  max-width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  transition: ease-in-out 400ms;
+  background-color: #FFE6E0;
+}
+.walking .mission-card h4 {
+  font-family: "roboto-sarif";
+  font-size: 22px;
+  font-weight: 600;
+}
+.walking .mission-card:hover {
+  transform: scale(1.05);
+}
+.walking .mission-card .card-img {
+  width: 80px;
+}
+.walking .mission-card a {
+  color: #232526;
+}
+.walking .mission-card .dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #232526;
+  color: white;
+  border-radius: 20px;
+}
+
+.about-body {
+  max-width: 1000px;
+  margin: auto;
+}
+.about-body > img {
+  max-width: 500px;
+  margin: auto;
+}
+.about-body .title {
+  padding-left: 10px;
+  border-left: 3px solid #C0304F;
+}
+
+.stats .stat-body {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #FFE6E0;
+  border-radius: 5px;
+}
+.stats .stat-body .stat-item {
+  max-width: 180px;
+  margin: auto;
+}
+
+.who-we-are {
+  max-width: 1000px;
+  margin: auto;
+}
+.who-we-are .who-we-are-body div:nth-of-type(1) .img-circle {
+  bottom: 10%;
+  right: 10%;
+  height: 150px;
+  width: 150px;
+  background-color: #C0304F;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.who-we-are .who-we-are-body div:nth-of-type(1) .img-circle h3, .who-we-are .who-we-are-body div:nth-of-type(1) .img-circle h5 {
+  color: white;
+}
+.who-we-are .who-we-are-body div:nth-of-type(1) .img-circle h3 span, .who-we-are .who-we-are-body div:nth-of-type(1) .img-circle h5 span {
+  font-size: 28px;
+}
+.who-we-are .who-we-are-body div:nth-of-type(1) img {
+  max-width: 400px;
+  margin: auto;
+}
+.who-we-are .who-we-are-body .who-we-are-info .who-we-are-card {
+  max-width: 400px;
+  margin: auto;
+}
+.who-we-are .who-we-are-body .who-we-are-info .who-we-are-card img {
+  max-width: 40px;
+}
+.who-we-are .who-we-are-body .who-we-are-info .who-we-are-card h3 {
+  font-family: "roboto-sarif";
+  font-weight: 600;
+  font-size: 22px;
+}/*# sourceMappingURL=styles.css.map */

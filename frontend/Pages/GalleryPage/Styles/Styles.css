@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+}
+.hero > div {
+  padding: 10px;
+}
+.hero > div img {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.tabs .tab-header {
+  max-width: 1000px;
+  margin: auto;
+}
+.tabs .tab-header .title {
+  padding-left: 10px;
+  border-left: 3px solid #C0304F;
+}
+.tabs .tab-header .subtitle {
+  max-width: 750px;
+}
+.tabs .tab-body {
+  max-width: 1000px;
+  margin: auto;
+}
+.tabs .tab-body .nav {
+  max-width: 800px;
+  display: flex;
+}
+.tabs .tab-body .nav .active {
+  border-bottom: 3px solid #C0304F;
+}
+.tabs .tab-body .nav a {
+  color: #747A82;
+  font-weight: 500;
+}
+.tabs .tab-body .tab-content > div {
+  padding: 10px;
+}
+.tabs .tab-body .tab-content > div img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}/*# sourceMappingURL=Styles.css.map */

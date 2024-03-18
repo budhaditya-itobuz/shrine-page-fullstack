@@ -1,0 +1,128 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "roboto-sarif",sans-serif;
+}
+
+.hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    .hero-header{
+        .title{
+            padding-left: 10px;
+            border-left:3px solid #C0304F;
+        }
+        .subtitle{
+            max-width: 800px;
+        }
+    }
+    .carousel-wrapper {
+        overflow: scroll;
+        max-width: 1000px;
+        transition: 1s ease;
+
+        .carousel {
+            transition: 1s ease;
+
+            &>div {
+                flex-shrink: 0;
+            }
+
+            img {
+                width: 100%;
+                max-height: 400px;
+            }
+        }
+    }
+
+    .buttons {
+        z-index: 3;
+        overflow: hidden;
+        border-radius: 2px;
+        width: fit-content;
+        right: -5px;
+        top: 40%;
+        border-radius: 2px;
+
+        .btn-left,
+        .btn-right {
+            background-color: #C0304F;
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+            &:hover{
+
+                background-color: black;
+            }
+        }
+    }
+}
+
+.team {
+    // padding: 50px 0;
+    max-width: 1000px;
+    margin: auto;
+    .teams {
+        margin: auto;
+
+        .card {
+            // height: 420px;
+            justify-content: start !important;
+            .social {
+                visibility: hidden;
+            }
+            .share {
+                height: 42px;
+                width: 42px !important;
+                border: 1px solid #dddddd;
+                border-radius: 50%;
+                img {
+                    width: 20px;
+                }
+            }
+
+            border:none;
+
+            h4 {
+                font-family: "roboto-sarif";
+                font-size: 22px;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+            padding:20px 10px;
+            max-width: 300px;
+            margin:auto;
+
+            &>img {
+                margin: auto;
+                width: 100%;
+            }
+
+            .details {
+                padding:10px;
+                &:hover {
+                    .social {
+                        visibility: unset;
+                        display: flex;
+
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .share {
+                        display: none;
+                        background-color: #C0304F;
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

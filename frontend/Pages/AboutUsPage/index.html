@@ -1,0 +1,214 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;1,100;1,200;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/styles.scss">
+    <link rel="stylesheet" href="../../Helper/helper.scss">
+    <title>Shrine</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "D9qU5JF9AKJ8ZkDh_",
+            });
+        })();
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white pt-lg-5 px-4">
+        <a class="navbar-brand d-lg-none" href="#"><img src="../../Images/Navbar/logo.svg" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto d-flex align-items-center">
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav mx-3" href="#">HOME</a>
+                </li>
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav" href="#">PAGES</a>
+                </li>
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav" href="#">BLOG</a>
+                </li>
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav" href="#">DONATION</a>
+                </li>
+                <li class="nav-item d-none d-lg-block mx-3 active">
+                    <a class="nav-link nav-logo" href="#">
+                        <img class="my-1" src="../../Images/Navbar/logo-brown.svg" alt="logo">
+                    </a>
+                </li>
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav" href="#">SHOP</a>
+                </li>
+                <li class="nav-item mx-3 active">
+                    <a class="nav-link hover-nav" href="#">CONTACTS</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link active" href="#"><img src="../../Images/Navbar/search.svg" alt="search"></a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link active" href="#"><img src="../../Images/Navbar/cart.svg" alt="cart"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="about my-5">
+        <div class="about-body row">
+            <img class="col-sm-12 col-lg-6 mb-4" src="../../Images/AboutUs/About/church.svg" alt="church">
+            <div class="col-sm-12 col-lg-6">
+                <h2 class="title mb-5">About us</h2>
+                <h5 class="subtitle mb-5">
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour,
+                    <br>
+                    <br>
+                    <br>
+                    or randomised words which don't look even slightly believable. If you are going to use
+                </h5>
+                <div class="mb-3 d-flex ">
+                    <img class="me-4" src="../../Images/AboutUs/About/check.svg" alt="check">
+                    <span class="subtitle mx-2">nam sagittis leo quis sem eleifend, si</span>
+                </div>
+                <div class="mb-4 d-flex " >
+                    <img class="me-4" src="../../Images/AboutUs/About/check.svg" alt="check">
+                    <span class="subtitle mx-2">Give each team a Bible verse or story.</span>
+                </div>
+                <button class="btn btn-dark py-3 px-5">LEARN MORE</button>
+            </div>
+        </div>
+    </section>
+    <section class="stats mx-2">
+        <div id="stat-container" class="stat-body row p-4">
+        </div>
+    </section>
+    <section class="walking my-5">
+        <div class="walking-header d-flex justify-content-between flex-column flex-md-row px-3 align-items-center ">
+            <h2 class="title mb-4">walking <br> together,growing in faith</h2>
+            <h5 class="subtitle">A long established fact that a reader will be distracted by the readable content of a
+                page when looking.A long established fact that.A long.</h5>
+        </div>
+        <div id="walking-container" class="waliking-body row px-3">
+            <!-- <img src="../../Images/AboutUs/Mission/book-open.svg" alt=""> -->
+        </div>
+    </section>
+    <section class="who-we-are my-5">
+        <div class="who-we-are-body row">
+            <div class="col-sm-12 col-lg-6 position-relative ">
+                <img class="" src="../../Images/AboutUs/WhoWeAre/book.svg" alt="book">
+                <div class="img-circle position-absolute d-flex flex-column  justify-content-center align-items-center ">
+                    <h3 class="title"><span>2</span>6K+</h3>
+                    <h5 class="subtitle">Happy Prayers</h5>
+                </div>
+            </div>
+            <div class="who-we-are-info col-sm-12 col-lg-6">
+                <div class="who-we-are-card mb-4">
+                    <img src="../../Images/AboutUs/WhoWeAre/1.svg" alt="1">
+                    <h3 class="mb-2">Who Are We</h3>
+                    <h4 class="subtitle">A long established fact that a reader will be A long established fact that a reader.</h4>
+                </div>
+                <div class="who-we-are-card mb-4">
+                    <img src="../../Images/AboutUs/WhoWeAre/2.svg" alt="1">
+                    <h3 class="mb-2">What We Believe</h3>
+                    <h4 class="subtitle">A long established fact that a reader will be A long established fact that a reader.</h4>
+                </div>
+                <div class="who-we-are-card mb-4">
+                    <img src="../../Images/AboutUs/WhoWeAre/3.svg" alt="1">
+                    <h3 class="mb-2">Our Community</h3>
+                    <h4 class="subtitle">A long established fact that a reader will be A long established fact that a reader.</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="footer pt-5">
+        <div class="container row m-auto">
+            <div class="col-sm-12 d-flex flex-column flex-md-row justify-content-between align-items-center py-2">
+                <div class="logo mb-3">
+                    <img src="../../Images/Footer/logo.svg" alt="Logo">
+                </div>
+                <h5 class="subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                </h5>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="footer-card my-4 mx-auto">
+                    <h4 class="mb-4">Quick Links</h4>
+                    <h5 class="subtitle">Features</h5>
+                    <h5 class="subtitle">Pricing</h5>
+                    <h5 class="subtitle">Case Studies</h5>
+                    <h5 class="subtitle">Reviews</h5>
+                    <h5 class="subtitle">Updates</h5>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="footer-card my-4 mx-auto">
+                    <h4 class="mb-4">Company</h4>
+                    <h5 class="subtitle">About</h5>
+                    <h5 class="subtitle">Contact Us</h5>
+                    <h5 class="subtitle">Careers</h5>
+                    <h5 class="subtitle">Culture</h5>
+                    <h5 class="subtitle">Blog</h5>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="footer-card my-4 mx-auto">
+                    <h4 class="mb-4">Support</h4>
+                    <h5 class="subtitle">Getting Started</h5>
+                    <h5 class="subtitle">Help Center</h5>
+                    <h5 class="subtitle">Server Status</h5>
+                    <h5 class="subtitle">Report a bug</h5>
+                    <h5 class="subtitle">Chat support</h5>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="footer-card my-4 mx-auto">
+                    <h4 class="mb-4">Suscribe to our newsletter</h4>
+                    <h5 class="subtitle mb-4">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam.</h5>
+
+                    <input class="mb-4" type="text" placeholder="Enter your email">
+                    <button class="btn btn-danger px-4 py-3 ">
+                        SUSCRIBE
+                    </button>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+                    <h5 class="subtitle">Copyright &#169 2022 Shrine | All Rights Reserved </h5>
+                    <div class="social d-flex">
+                        <img class="mx-2" src="../../Images/Footer/instagram.svg" alt="instagrsm">
+                        <img class="mx-2" src="../../Images/Footer/twitter.svg" alt="twitter">
+                        <img class="mx-2" src="../../Images/Footer/whatsapp.svg" alt="whatsapp">
+                        <img class="mx-2" src="../../Images/Footer/youtube.svg" alt="youtube">
+                        <img class="mx-2" src="../../Images/Footer/facebook.svg" alt="facebook">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./main.js" type="module">
+
+    </script>
+</body>
+
+</html>

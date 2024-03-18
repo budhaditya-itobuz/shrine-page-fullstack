@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboto-sarif", sans-serif;
+}
+
+.hero {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+.hero .hero-header .title {
+  padding-left: 10px;
+  border-left: 3px solid #C0304F;
+}
+.hero .hero-header .subtitle {
+  max-width: 800px;
+}
+.hero .carousel-wrapper {
+  overflow: scroll;
+  max-width: 1000px;
+  transition: 1s ease;
+}
+.hero .carousel-wrapper .carousel {
+  transition: 1s ease;
+}
+.hero .carousel-wrapper .carousel > div {
+  flex-shrink: 0;
+}
+.hero .carousel-wrapper .carousel img {
+  width: 100%;
+  max-height: 400px;
+}
+.hero .buttons {
+  z-index: 3;
+  overflow: hidden;
+  border-radius: 2px;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: -5px;
+  top: 40%;
+  border-radius: 2px;
+}
+.hero .buttons .btn-left,
+.hero .buttons .btn-right {
+  background-color: #C0304F;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+.hero .buttons .btn-left:hover,
+.hero .buttons .btn-right:hover {
+  background-color: black;
+}
+
+.team {
+  max-width: 1000px;
+  margin: auto;
+}
+.team .teams {
+  margin: auto;
+}
+.team .teams .card {
+  justify-content: start !important;
+  border: none;
+  padding: 20px 10px;
+  max-width: 300px;
+  margin: auto;
+}
+.team .teams .card .social {
+  visibility: hidden;
+}
+.team .teams .card .share {
+  height: 42px;
+  width: 42px !important;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+}
+.team .teams .card .share img {
+  width: 20px;
+}
+.team .teams .card h4 {
+  font-family: "roboto-sarif";
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.team .teams .card > img {
+  margin: auto;
+  width: 100%;
+}
+.team .teams .card .details {
+  padding: 10px;
+}
+.team .teams .card .details:hover .social {
+  visibility: unset;
+  display: flex;
+}
+.team .teams .card .details:hover .social img {
+  margin-right: 10px;
+}
+.team .teams .card .details:hover .share {
+  display: none;
+  background-color: #C0304F;
+}
+.team .teams .card .details:hover .share img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(329deg) brightness(107%) contrast(101%);
+}/*# sourceMappingURL=Styles.css.map */

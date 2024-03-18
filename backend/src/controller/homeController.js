@@ -4,8 +4,6 @@ import path from 'path'
 import { StatusCodes } from "http-status-codes"
 
 
-
-
 export const getMembers = async (req, res) => {
     if (!!members)
         res.status(StatusCodes.OK).json(members)
